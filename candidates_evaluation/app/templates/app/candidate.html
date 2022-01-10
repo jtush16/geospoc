@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+
+    <h1>Candidate Information</h1><br>
+    {{context}}
+    {{name_error}}<br><br>
+    <form action="http://127.0.0.1:8000/candidate/" method="post">
+        {% csrf_token %}
+        Name : <input type="text" name="name" id="name"> <br><br>
+        email : <input type="email" name="email" id="email"><br><br>
+        Web Address : <input type="text" name="web_address" id="web_address"><br><br>
+        Cover Letter : <input type="file" name="cover_letter" id="cover_letter"><br><br>
+        CV : <input type="file" name="cv" id="cv"><br><br>
+        Do you Like working : <input type="radio" name="like" id="like"> Yes <input type="radio" name="like">No <br><br>
+        <input type="submit"><br><br>
+    </form>
+
+<a href="http://127.0.0.1:8000/login/">Login</a>
+
+
+
+</body>
+</html>

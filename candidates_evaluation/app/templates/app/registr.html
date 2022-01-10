@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+                    <h1> Registration </h1><br>
+                    {{context}}<br><br>
+    <form action="http://127.0.0.1:8000/registration/" method="post">
+        {% csrf_token %}
+        Name : <input type="text" name="login_name" id="login_name"><br><br>
+        Email : <input type="text" name="login_email" id="login_email"><br><br>
+        Password : <input type="password" name="login_password" id="login_password"><br><br>
+        Confirm Password : <input type="password" name="login_confirm" id="login_confirm"><br><br>
+        <input type="submit">
+    </form>
+
+</body>
+</html>

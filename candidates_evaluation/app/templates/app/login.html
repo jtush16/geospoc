@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+            <h1> Login </h1> <br>
+            {% for message in messages%}
+            {{message}}<br><br>
+            {%endfor%}
+        <form action="http://127.0.0.1:8000/login/" method="post" >
+            {% csrf_token %}
+          User : <input type="text" name="user" id="user"><br><br>
+          Password : <input type="text" name="password" id="password"><br><br>
+            <input type="submit"> <br><br>
+            <a href="http://127.0.0.1:8000/registration/">Register</a>
+        </form>
+</body>
+</html>

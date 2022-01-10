@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Candidates</title>
+</head>
+<body>
+{% if candidates%}
+    <form action="http://127.0.0.1:8000/allcandidates/" method="post">
+        <table border="1">
+            <thead>
+            <th>Candidate ID</th>
+            <th>Candidate Name</th>
+            <th>Candidate Email</th>
+            <th>Candidate Web</th>
+            <th>Candidate cv</th>
+            </thead>
+            {% for candidate in candidates %}
+            <tbody>
+            <td>{{candidate.id}}</td>
+            <td>{{candidate.name}}</td>
+            <td>{{candidate.email}}</td>
+            <td>{{candidate.web}}</td>
+            <td>{{candidate.cv}}</td>
+            </tbody>
+            {%endfor%}
+        </table>
+    </form>
+{%endif%}
+<br><br>
+<a href="http://127.0.0.1:8000/logout">Logout</a>
+
+
+</body>
+</html>
